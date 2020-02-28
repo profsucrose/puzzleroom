@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CosmOS</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper" onmouseup="changeDragging(false)">
+      <div class="desktop">
+        <div class="icon">
+          <img src="assets/info.png" onclick="openWindow('system')" />
+          <p>System</p>
+        </div>
+        <div class="icon">
+          <img src="assets/notesIcon.png" onclick="openWindow('notes')" />
+          <p>Notes</p>
+        </div>
+        <div class="icon">
+          <img src="assets/logsIcon.png" onclick="openWindow('logs')" />
+          <p>Logs</p>
+        </div>
+      </div>
+      <div class="overlay"></div>
+      <div class="timebox">
+        <p class="time"></p>
+      </div>
+      <div class="window logs">
+        <div class="window-bar" onmousedown="changeDragging(true, 'logs')">
+          <div class="window-bar-name">
+            <img class="bar-icon" src="assets/logsIcon.png" />
+            <p>Logs</p>
+          </div>
+          <button class="close-window" onclick="closeWindow('logs')">X</button>
+        </div>
+        <div class="window-content">
+          <h1>Log Manager</h1>
+          <p>Logs</p>
+        </div>
+      </div>
+      <div class="window notes">
+        <div class="window-bar" onmousedown="changeDragging(true, 'notes')">
+          <div class="window-bar-name">
+            <img class="bar-icon" src="assets/notesIcon.png" />
+            <p>Notes</p>
+          </div>
+          <button class="close-window" onclick="closeWindow('notes')">X</button>
+        </div>
+        <div class="window-content">
+          <textarea class="notes-text"></textarea>
+        </div>
+      </div>
+      <div class="window system" style="width:600px;height:400px;">
+        <div class="window-bar" onmousedown="changeDragging(true, 'system')">
+          <div class="window-bar-name">
+            <img class="bar-icon" src="assets/info.png" />
+            <p>System Information</p>
+          </div>
+          <button class="close-window" onclick="closeWindow('system')">X</button>
+        </div>
+        <div class="window-content">
+          <img class="system-chip" src="assets/cosmosChip.png" />
+          <h1>System Information</h1>
+          <p>© 1989 - 2002 Spacetour Industries, All Rights Reserved</p>
+          <p>CosmOS Version 3.1.0</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Andale Mono MT Std';
+    user-select: none;
+    overflow: hidden;
+}
+
+.system-chip {
+    width: 70px;
+    display: inline-block;
+}
+
+.window-content {
+    padding-left: 15px;
+    min-height: 85%;
+}
+
+.close-window {
+    cursor: url(assets/Windows7Cursor.png), auto;
+    background: #dbdbdb;
+    height: 30px;
+    box-shadow: inset -2px -2px rgba(18, 18, 18, 0.25), inset 2px 2px rgba(255, 255, 255, 0.25);
+    outline: none;
+}
+
+.window {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: none;
+    background: #dbdbdb;
+    padding: 4px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    box-shadow: inset -3px -3px rgba(18, 18, 18, 0.25), inset 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+.window-bar-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.window-bar-name p {
+    margin: 0;
+    margin-left: 10px;
+    padding-top: 6px;
+}
+
+.bar-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.window-bar {
+    background: white;
+    height: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding-left: 12px;
+    padding-right: 3px;
+}
+
+.notes-text {
+    font-family: 'Andale Mono';
+    margin-top: 10px;
+    width: 100%;
+    height: 338px;
+    border: none;
+    background: none;
+    outline: none;
+    resize: none;
+}
+
+.desktop {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80px;
+    height: 110px;
+    margin-bottom: 25px;
+}
+
+.icon p {
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.icon img {
+    height: 80px;
+    width: 80px;
+    opacity: 0.94;
+}
+
+.timebox {
+    width: 100vw;
+    height: 60px;
+    position: absolute;
+    background: #dbdbdb;
+    bottom: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.time {
+    padding-right: 40px;
+}
+
+.wrapper {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vw;
+    width: 100vw;
+    background: white no-repeat fixed center url("assets/CosmOS\ Wallpaper.png");
+    background-size: 1000px;
+    cursor: url(assets/Windows7Cursor.png), auto;
+}
+
+.wallpaper {
+    width: 300px;
+}
+
+.overlay {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    background: repeating-linear-gradient(rgba(255, 255, 255, 0.25) 0, transparent 1px, transparent 3px, rgba(18, 18, 18, 0.25) 4px);
+    width: 100vw;
+    height: 200vh;
+    pointer-events: none;
+    z-index: 999;
+    -webkit-animation: buzz 1000ms linear infinite;
+    animation: buzz 1000ms linear infinite;
+    mix-blend-mode: hard-light;
+}
+
+@keyframes buzz {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(100vh);
+        transform: translateY(100vh);
+    }
+}
